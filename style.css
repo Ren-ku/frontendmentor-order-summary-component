@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+:root {
+--Paleblue: hsl(225, 100%, 94%);
+--Brightblue: hsl(245, 75%, 52%);
+--Brightblue1: hsl(245, 75%, 65%);
+    
+--Verypaleblue: hsl(225, 100%, 98%);
+--Desaturatedblue: hsl(224, 23%, 55%);
+--Darkblue: hsl(223, 47%, 23%);
+
+--ff-regular: 'Red Hat Display', sans-serif;
+--fw-regular: 500;
+--fw-bold: 700;
+--fw-superbold: 900;
+
+}
+
+/*
+  Josh's Custom CSS Reset: https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  * {
+    margin: 0;
+    border-collapse: separate;
+  }
+  html, body {
+    height: 100%;
+  }
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  input, button, textarea, select {
+    font: inherit;
+  }
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  #root, #__next {
+    isolation: isolate;
+  }
+  
+  body{
+    min-height:  100vh;
+    background-color: var(--Paleblue);
+    background-image: url(images/pattern-background-mobile.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: var(--ff-regular);
+    font-size: 16px;
+    font-weight: var(--fw-bold);
+    color: var(--Desaturatedblue);
+
+  }
+
+
+
+
+/* Card stuff */
+
+.card__container{
+  display: grid;
+  gap: 0.5rem;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  max-width: 343px;
+  margin: 2rem auto;
+  border-radius: 1rem;  
+}
+
+.card__content {
+  display: grid;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.card__img {
+  overflow: hidden;
+  width: 100%;
+  border-radius: 1rem 1rem 0 0;
+}
+
+.annual-flex-group {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: var(--Verypaleblue);
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+}
+
+.small-flex {
+  display: flex;
+  gap: 1rem;
+}
+
+.buttons {
+  cursor: pointer;
+  padding: 0.75rem;
+  border-radius: 0.75rem;
+  border: none;
+  font-weight: 700;
+  transition: 300ms ease-in-out;
+}
+
+.button-change {
+  background: transparent;
+  text-decoration: underline;
+  color: var(--Darkblue);
+  
+}
+
+.button-change:hover {
+  color: var(--Brightblue);
+  text-decoration: none;
+}
+
+.button-payment {
+  color: white;
+  background-color: var(--Brightblue);
+}
+
+.button-payment:hover {
+  background-color: var(--Brightblue1);
+}
+
+
+
+.button-cancel {
+  background: transparent;
+  color: var(--Desaturatedblue);
+}
+
+.button-cancel:hover {
+color: var(--Brightblue);
+}
+
+.card__content h1 {
+  font-weight: var(--fw-superbold);
+  color: var(--Darkblue);
+}
+
+.annual-span { 
+  color: var(--Darkblue);
+}
+
+
+  /* Attribution */
+
+  .attribution { font-size: 11px; text-align: center; }
+  .attribution a { color: hsl(228, 45%, 44%); }
+
+  @media (min-width: 600px) {
+    body {
+      background-image: url(images/pattern-background-desktop.svg);
+      background-color: var(--Paleblue);
+      min-height: 100vh;
+      position: relative;
+    }
+
+    .card__container {
+      min-width: 450px;
+      gap: 0.75rem;
+
+    }
+  }
