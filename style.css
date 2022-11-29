@@ -49,6 +49,10 @@
   }
   
   body{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
     min-height:  100vh;
     background-color: var(--Paleblue);
     background-image: url(images/pattern-background-mobile.svg);
